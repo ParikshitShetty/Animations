@@ -1,0 +1,79 @@
+/* Solar System */
+.conatainer{
+    height: 100vh;
+    position: relative;
+    background-color: black;
+  }
+  
+  .sun{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 40px;
+    background: #ff2;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ff1,
+    0 0 10px #ff2,
+    0 0 20px #ff5,
+    0 0 50px #ff6;
+  }
+  
+  .earth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation: rotate 16s infinite linear;
+  }
+  
+  .earth::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #aaf;
+    box-shadow: 0 0 15px #fff;
+  }
+  
+  .moon{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation: rotate 3s infinite linear;
+  }
+  
+  .moon::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fa2;
+    left: 50%;
+    top: 0;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px #ff2;
+  }
+  
+  
+
+@keyframes rotate{
+    100%{
+      transform: translate(-50%,-50%) rotate(360deg);
+    }
+  }
